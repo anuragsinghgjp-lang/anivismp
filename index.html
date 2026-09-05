@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ANIVI SMP | Minecraft Server</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        ⚔️ ANIVI <span>SMP</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#ranks">Ranks</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#rules">Rules</a>
+    </nav>
+
+    <a class="discord" href="https://discord.gg/yVEVx2TXR" target="_blank">
+        Discord
+    </a>
+</header>
+
+
+<!-- HOME -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">⚡ JAVA + BEDROCK SMP</p>
+
+        <h1>
+            WELCOME TO<br>
+            <span>ANIVI SMP</span>
+        </h1>
+
+        <p class="description">
+            Build. Fight. Trade. Survive.<br>
+            Create your own story in the world of ANIVI SMP.
+        </p>
+
+        <div class="buttons">
+
+            <button onclick="copyIP()" class="join-btn">
+                🎮 COPY SERVER IP
+            </button>
+
+            <a href="#ranks" class="rank-btn">
+                VIEW RANKS →
+            </a>
+
+        </div>
+
+
+        <div class="server-box">
+
+            <div>
+                <span class="online-dot"></span>
+                ANIVI SMP
+            </div>
+
+            <code id="serverIP">
+                Anivismp.aternos.me
+            </code>
+
+            <span class="status">
+                SERVER
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- RANK SHOP -->
+
+<section id="ranks" class="section">
+
+    <div class="heading">
+
+        <p>IN-GAME ECONOMY</p>
+
+        <h2>
+            RANK <span>SHOP</span>
+        </h2>
+
+        <div class="heading-text">
+            Buy exclusive ranks using your hard-earned
+            in-game coins.
+        </div>
+
+    </div>
+
+
+    <div class="rank-container">
+
+
+        <!-- VIP -->
+
+        <div class="rank-card">
+
+            <div class="rank-icon">⭐</div>
+
+            <h3>VIP</h3>
+
+            <div class="price">
+                25,000 <small>COINS</small>
+            </div>
+
+            <ul>
+                <li>VIP Chat Prefix</li>
+                <li>Extra Kit</li>
+                <li>2 Homes</li>
+                <li>Special Commands</li>
+            </ul>
+
+            <button onclick="buyRank('VIP', 25000)">
+                BUY VIP
+            </button>
+
+        </div>
+
+
+
+        <!-- VIP+ -->
+
+        <div class="rank-card popular">
+
+            <div class="popular-tag">
+                POPULAR
+            </div>
+
+            <div class="rank-icon">💎</div>
+
+            <h3>VIP+</h3>
+
+            <div class="price">
+                60,000 <small>COINS</small>
+            </div>
+
+            <ul>
+                <li>VIP+ Chat Prefix</li>
+                <li>Special Kit</li>
+                <li>4 Homes</li>
+                <li>Exclusive Commands</li>
+            </ul>
+
+            <button onclick="buyRank('VIP+', 60000)">
+                BUY VIP+
+            </button>
+
+        </div>
+
+
+
+        <!-- LEGEND -->
+
+        <div class="rank-card">
+
+            <div class="rank-icon">👑</div>
+
+            <h3>LEGEND</h3>
+
+            <div class="price">
+                150,000 <small>COINS</small>
+            </div>
+
+            <ul>
+                <li>Legend Prefix</li>
+                <li>Premium Kit</li>
+                <li>8 Homes</li>
+                <li>Premium Commands</li>
+            </ul>
+
+            <button onclick="buyRank('LEGEND', 150000)">
+                BUY LEGEND
+            </button>
+
+        </div>
+
+    </div>
+
+    <p class="demo-note">
+        ⚠️ Rank purchases are currently a demo.
+        Real purchases require a server economy/API connection.
+    </p>
+
+</section>
+
+
+
+<!-- LEADERBOARD -->
+
+<section id="leaderboard" class="section leaderboard">
+
+    <div class="heading">
+
+        <p>SERVER STATS</p>
+
+        <h2>
+            TOP <span>PLAYERS</span>
+        </h2>
+
+    </div>
+
+
+    <div class="table">
+
+        <div class="table-row header">
+
+            <span>#</span>
+            <span>PLAYER</span>
+            <span>HEARTS</span>
+            <span>COINS</span>
+
+        </div>
+
+
+        <div class="table-row">
+
+            <span>01</span>
+            <b>ANIVI_KING</b>
+            <span>24 ❤️</span>
+            <span>1.2M</span>
+
+        </div>
+
+
+        <div class="table-row">
+
+            <span>02</span>
+            <b>ShadowOP</b>
+            <span>21 ❤️</span>
+            <span>980K</span>
+
+        </div>
+
+
+        <div class="table-row">
+
+            <span>03</span>
+            <b>ItsAnurag</b>
+            <span>19 ❤️</span>
+            <span>750K</span>
+
+        </div>
+
+
+        <div class="table-row">
+
+            <span>04</span>
+            <b>DragonX</b>
+            <span>18 ❤️</span>
+            <span>620K</span>
+
+        </div>
+
+
+        <div class="table-row">
+
+            <span>05</span>
+            <b>NightWolf</b>
+            <span>17 ❤️</span>
+            <span>510K</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- RULES -->
+
+<section id="rules" class="section">
+
+    <div class="heading">
+
+        <p>PLAY FAIR</p>
+
+        <h2>
+            SERVER <span>RULES</span>
+        </h2>
+
+    </div>
+
+
+    <div class="rules">
+
+        <div class="rule">
+            <strong>01</strong>
+            <div>
+                <h3>Respect Everyone</h3>
+                <p>
+                    No harassment, hate speech or unnecessary toxicity.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="rule">
+            <strong>02</strong>
+            <div>
+                <h3>No Cheating</h3>
+                <p>
+                    Hacked clients, unfair exploits and cheats are prohibited.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="rule">
+            <strong>03</strong>
+            <div>
+                <h3>No Griefing</h3>
+                <p>
+                    Don't destroy or steal from other players' builds.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="rule">
+            <strong>04</strong>
+            <div>
+                <h3>Have Fun</h3>
+                <p>
+                    Build, fight, trade and enjoy ANIVI SMP.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- DISCORD -->
+
+<section class="discord-section">
+
+    <h2>JOIN THE <span>ANIVI COMMUNITY</span></h2>
+
+    <p>
+        Chat with players, get updates and participate in events.
+    </p>
+
+    <a href="https://discord.gg/yVEVx2TXR"
+       target="_blank"
+       class="discord-big">
+
+        💬 JOIN DISCORD
+
+    </a>
+
+</section>
+
+
+
+<footer>
+
+    <div class="logo">
+        ⚔️ ANIVI <span>SMP</span>
+    </div>
+
+    <p>
+        © 2026 ANIVI SMP. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
